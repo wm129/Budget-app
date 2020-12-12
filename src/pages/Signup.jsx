@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-/*import {Link} from 'react-router-dom';*/
+import {Link} from 'react-router-dom';
 import {auth} from "../config/firebase";
 import {makeStyles} from '@material-ui/core/styles';
-import {Button,TextField} from '@material-ui/core';
+import {Button, TextField} from '@material-ui/core';
 
 const useStyles = makeStyles({
     title: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 const Signup = () => {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
-    const [password, setPassworld] = useState("")
+    const [password, setPassword] = useState("")
     const classes = useStyles()
 
     const handleSubmit= (e) => {
@@ -30,7 +30,6 @@ const Signup = () => {
         .then((response) => {
             console.log('ok', response)
         })
-
         .catch((error) => {
             console.error("ERR", error)
         })
@@ -50,14 +49,15 @@ return (
         value={email}
         onChange={(e) => setEmail(e.target.value)}
          />
-        <TextField 
+        <TextField
+        type="password" 
         label="password" 
         variant="outlined"
         value={password}
-        onChange={(e) => setPassworld(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)}
          />
         <Button type="submit" variant="contained" color="primary">登録</Button>
-        <p>Jump to Signin page</p>
+        <Link to='login'>Jump to Signin page</Link>
     </form>
 )
 };
