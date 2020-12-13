@@ -57,7 +57,7 @@ return (
         onChange={(e) => setPassword(e.target.value)}
          />
         <Button type="submit" variant="contained" color="primary">登録</Button>
-        <Link to='login'>Jump to Signin page</Link>
+        <Link to='login'>Jump to　Login page</Link>
     </form>
 )
 };
