@@ -3,8 +3,8 @@ import {auth} from "../config/firebase"
 import {AuthContext} from '../context/AuthService';
 
 const Room = () => {
-const foo = useContext(AuthContext);
-console.log('foo');
+const user = useContext(AuthContext);
+
 const signout = () => {
     auth.signOut();
 };
