@@ -10,16 +10,16 @@ import Signup from './pages/Signup';
 
 const App = () => {
     return (
-        <BrowserRouter>
         <AuthProvider>
+        <BrowserRouter>
         <Switch>
             <LoggedinRoute exact path="/" component={Room} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
         
         </Switch>
-        </AuthProvider>
         </BrowserRouter>
+        </AuthProvider>
     );
 };
 
