@@ -24,6 +24,17 @@ const signout = () => {
     auth.signOut();
 };
 
+const handleSubmit = (e) => {
+    e.preventDefault();
+    //console.log(figure);//
+    db.collection('budget')
+    .add({
+        expensive: figure,
+        name: user.displayName,
+        createdAt: new Date(),
+    });
+};
+
 useEffect(() => {
     db.collection('budget')
     .get()
@@ -45,10 +56,10 @@ return (
                 </Card>
                 );
             })}
-        <form>
+        <form onSubmit={handleSubmit}>
             <TextField 
             variant='filled'
-            placeholder="plese write cost in this area"
+            placeholder="plese write costs in this area"
             value={figure} 
             onChange={(e) => setFigure(e.target.value)} 
             />
