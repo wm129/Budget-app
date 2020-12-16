@@ -28,7 +28,10 @@ const Signup = () => {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(email, password)
         .then((response) => {
-            console.log('ok', response)
+            console.log('ok', response);
+            response.user.updateProfile({
+                displayName: username,
+            })
         })
         .catch((error) => {
             console.error("ERR", error)
