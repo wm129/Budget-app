@@ -26,8 +26,8 @@ const signout = () => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    //console.log(figure);//
     db.collection('budget')
+    .orderBy('createdAt')
     .add({
         expensive: figure,
         name: user.displayName,
@@ -36,13 +36,11 @@ const handleSubmit = (e) => {
 };
 
 useEffect(() => {
-    db.collection('budget')
-    .get()
-    .then((querySnapshot) => {
+    db.collection('budget').onSnapshot((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => {
             return { ...doc.data(), id: doc.id };
-        });
-        setBudget(data);
+            });
+            setBudget(data);    
     });
 },[]);
 return (
