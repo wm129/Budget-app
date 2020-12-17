@@ -1,19 +1,17 @@
-import React from 'react';
-
-
-import {makeStyles} from "@material-ui/core/styles";
-import {Card, Typography} from "@material-ui/core";
+import React,{ useEffect, useState } from 'react';
+import { db } from '../config/firebase';
 import Item from './Item';
 
-const useStyles = makeStyles({
-budget: {
-    padding: "15px",
-    margin: "15px",
-},
-});
-
-const List = ({budget}) => {
-    const classes = useStyles();
+const List = () => {
+    const [budget, setBudget] = useState([]); 
+    useEffect(() => {
+        db.collection('budget').onSnapshot((querySnapshot) => {
+            const data = querySnapshot.docs.map((doc) => {
+                return { ...doc.data(), id: doc.id };
+                });
+                setBudget(data);    
+        });
+    },[]);
     return (
     <>
         {budget.map((budget) => {
