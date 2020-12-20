@@ -5,7 +5,7 @@ import Item from './Item';
 const List = () => {
     const [budget, setBudget] = useState([]); 
     useEffect(() => {
-        db.collection('budget').onSnapshot((querySnapshot) => {
+        db.collection('budget').orderBy('createdAt').onSnapshot((querySnapshot) => {
             const data = querySnapshot.docs.map((doc) => {
                 return { ...doc.data(), id: doc.id };
                 });

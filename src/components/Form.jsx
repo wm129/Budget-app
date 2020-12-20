@@ -9,10 +9,9 @@ const Form = () => {
     const [figure, setFigure] = useState('');
     const user = useContext(AuthContext);
    
-const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault();
     db.collection('budget')
-    .orderBy('createdAt')
     .add({
         expensive: figure,
         name: user.displayName,
@@ -21,7 +20,8 @@ const handleSubmit = (e) => {
     .then(() => {
         setFigure('');
     });
-};
+    };
+
     return (
         <form onSubmit={handleSubmit}>
             <TextField 
@@ -36,7 +36,17 @@ const handleSubmit = (e) => {
 };
 export default Form;
 
-
+/*
+const expenseAmount = () => {
+    const BudgetData = db.collection('budget')
+    BudgetData.where('expensive', '>=', 1)
+    .onSnapshot(query => {
+        const expenseItem = []
+        query.forEach(doc => expenseItem.push({...doc.data(), docId: doc.id}))
+    setExpenseItem(expenseItem);
+    })
+}
+*/
 
 
 
