@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from 'react';
 import { db } from '../config/firebase';
 import Item from './Item';
+import Check from './Check';
 
 const List = () => {
     const [budget, setBudget] = useState([]); 
@@ -18,6 +19,8 @@ const List = () => {
             return (<Item key={budget.id} budget={budget}/>
             );
         })}
+        <Check 
+        budget={budget} />
     </>
     );
 };
