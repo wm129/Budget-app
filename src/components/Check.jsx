@@ -1,12 +1,10 @@
 import React from 'react';
 
-
-
 const Check = ({budget}) => {
 const expenseAmount = budget.map(budget => budget.expensive);
 const expenseTotal = expenseAmount.reduce((acc, cur) => acc += cur,0);
 
-return <div>Total{expenseTotal}yen</div>;  
+return <div>Total{Number(expenseTotal)}yen</div>;  
 };
 
 export default Check;
