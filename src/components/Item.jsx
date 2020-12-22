@@ -12,9 +12,11 @@ const useStyles = makeStyles({
     
 const Item = ({budget}) => {
     const classes = useStyles();
+    //const date = budget.createdAt;
+    //const dateStamp = date.toDate();
     return(
         <Card key={budget.id} className={classes.budget}>
-                <Typography>wtitten by: {budget.name}</Typography>
+                <Typography>wtitten by: {budget.name}, date: {budget.createdAt.toDate} </Typography>
                 <Typography>expense: {budget.expensive}yen</Typography>                    
         </Card>
     );
