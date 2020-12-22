@@ -14,8 +14,8 @@ const Item = ({budget}) => {
     const classes = useStyles();
     return(
         <Card key={budget.id} className={classes.budget}>
-                <Typography>user: {budget.name}</Typography>
-                <Typography>{budget.expensive}</Typography>                    
+                <Typography>wtitten by: {budget.name}</Typography>
+                <Typography>expense: {budget.expensive}yen</Typography>                    
         </Card>
     );
 };
