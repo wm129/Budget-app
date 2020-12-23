@@ -19,8 +19,7 @@ const List = () => {
             return (<Item key={budget.id} budget={budget}/>
             );
         })}
-        <Check 
-        budget={budget} />
+        <Check budget={budget} />
     </>
     );
 };
