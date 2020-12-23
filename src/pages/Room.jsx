@@ -3,9 +3,7 @@ import {auth} from "../config/firebase"
 
 import List from '../components/List';
 import Form from '../components/Form';
-/* import Check from '../components/Check'; */
 import {Button} from "@material-ui/core";
-
 
 
 const Room = () => {
