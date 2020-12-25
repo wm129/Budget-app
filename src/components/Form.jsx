@@ -24,14 +24,18 @@ const Form = () => {
     };
 
     return (
+        <div className="form-wrapper">
         <form onSubmit={handleSubmit}>
+            <div className="input-wrapper">
             <Input 
             type="number"
             value={figure} 
             onChange={(e) => setFigure(e.target.value)} 
             />
+            </div>
             <Button type="submit" variant="contained" color="secondary">Send</Button>
         </form>
+        </div>
     );
 };
 export default Form;
