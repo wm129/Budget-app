@@ -15,7 +15,9 @@ return (
     <>
     <div className="container">
         <div className="app-wrapper">
-        <h1>Room</h1>
+        <div className="header">   
+            <h1>Medical Expense</h1>
+        </div>
             <List />
             <Form />
         <Button onClick={signout} variant='contained'>Logout</Button>
