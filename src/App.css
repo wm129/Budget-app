@@ -50,9 +50,12 @@ html {
   .form-wrapper {
     grid-column: 2 / -1;
     grid-row: 2 / 4;
-    display: grid;
+    width: min-content;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .input-wrapper input:not([type="submit"]) {
     width: 30rem;
@@ -79,6 +82,13 @@ html {
   }
   .input-wrapper input[type="submit"]:active {
       transform: translateY(0.3rem);
+  }
+  .item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+  height: 12vh;
+  font-family: "Muli", serif;
   }
 
   
