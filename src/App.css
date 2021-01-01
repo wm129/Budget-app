@@ -31,6 +31,13 @@ html {
   grid-template-rows: repeat(10, 2.5fr);
   grid-gap: 0.3rem;
 }
+.logout-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.8rem;
+  font-family: "Muli", serif;
+}
 .header {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
@@ -48,7 +55,7 @@ html {
     text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
   }
   .form-wrapper {
-    grid-column: 2 / -1;
+    grid-column: 3 / 3;
     grid-row: 2 / 4;
     width: min-content;
     grid-template-columns: repeat(2, 1fr);
@@ -58,7 +65,7 @@ html {
     align-items: center;
   }
   .input-wrapper input:not([type="submit"]) {
-    width: 30rem;
+    width: 10rem;
     margin-bottom: 2.5rem;
     border: none;
     background: transparent;

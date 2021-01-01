@@ -20,7 +20,9 @@ return (
         </div>
             <List />
             <Form />
-        <Button onClick={signout} variant='contained'>Logout</Button>
+            <div className="logout-button">
+            <Button onClick={signout} variant='contained'>Logout</Button>
+            </div>
         </div>
     </div>
     </>
