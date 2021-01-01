@@ -5,12 +5,15 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     budget: {
-        padding: "15px",
-        margin: "15px",
+        padding: "0px",
+        margin: "5px",
     },
     });
     
-const Item = ({budget}) => {
+const Item = ({budget, deleteItem }) => {
+    const handleClick = () => {
+        deleteItem();
+    };
     const classes = useStyles();
     //const date = budget.createdAt;
     //const dateStamp = date.toDate();
@@ -18,7 +21,8 @@ const Item = ({budget}) => {
     return(
         <Card key={budget.id} className={classes.budget}>
                 <Typography>wtitten by: {budget.name}, date: {budget.createdAt.toDate().toString()} </Typography>
-                <Typography>expense: {budget.expensive}yen</Typography>                    
+                <Typography>expense: {budget.expensive}yen</Typography> 
+                <button onClick={handleClick} type="button">delete</button>                   
         </Card>
     );
 };

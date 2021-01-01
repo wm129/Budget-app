@@ -13,10 +13,13 @@ const List = () => {
                 setBudget(data);    
         });
     },[]);
+    const deleteItem = (id) => {
+        db.collection('budget').doc(id).delete()
+    }
     return (
     <>
         {budget.map((budget) => {
-            return (<Item key={budget.id} budget={budget}/>
+            return (<Item key={budget.id} budget={budget} deleteItem={deleteItem} />
             );
         })}
         <Check budget={budget} />
