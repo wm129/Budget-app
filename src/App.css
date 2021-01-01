@@ -65,7 +65,7 @@ html {
     align-items: center;
   }
   .input-wrapper input:not([type="submit"]) {
-    width: 10rem;
+    width: 18rem;
     margin-bottom: 2.5rem;
     border: none;
     background: transparent;
@@ -76,7 +76,7 @@ html {
     outline: none;
   }
   .input-wrapper input[type="submit"] {
-    width: 10rem;
+    width: 18rem;
     padding: 0.7rem;
     border: none;
     outline: none;
