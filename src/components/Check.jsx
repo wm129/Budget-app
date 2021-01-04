@@ -18,28 +18,3 @@ return (
 };
 
 export default Check;
-
-/*
-
-db.collection("cities").where("capital", "==", true)
-    .get()
-    .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-        });
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-const Judge = () => {
-const medicalExpense = Number(expenseTotal);
-    if ( medicalExpense >= 100000) {
-        return <span>Yes</span>;
-    } else {
-        return <span>No</span>;
-    }
-}; 
-
-
-*/

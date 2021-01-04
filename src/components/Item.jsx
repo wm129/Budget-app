@@ -12,12 +12,10 @@ const useStyles = makeStyles({
     
 const Item = ({budget, deleteItem }) => {
     const handleClick = () => {
-        deleteItem();
+        deleteItem(budget.id);
     };
     const classes = useStyles();
-    //const date = budget.createdAt;
-    //const dateStamp = date.toDate();
-    console.log(budget.createdAt.toDate); //JSX objectをそのまま返していた　＝＞　toString()で文字に型を変更して渡すと解決
+    console.log(budget.createdAt.toDate); 
     return(
         <Card key={budget.id} className={classes.budget}>
                 <Typography>wtitten by: {budget.name}, date: {budget.createdAt.toDate().toString()} </Typography>

@@ -14,7 +14,11 @@ const List = () => {
         });
     },[]);
     const deleteItem = (id) => {
-        db.collection('budget').doc(id).delete()
+        db.collection('budget').doc(id).delete().then(function() {
+            console.log("Document successfully deleted!");
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);    
+        });
     }
     return (
     <>
