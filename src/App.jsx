@@ -11,7 +11,7 @@ import Signup from './pages/Signup';
 const App = () => {
     return (
         <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
             <LoggedinRoute exact path="/" component={Room} />
             <Route exact path="/login" component={Login} />

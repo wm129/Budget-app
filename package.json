@@ -20,9 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://wm129.github.io/Budget-app/",
     "deploy": "npm run build && gh-pages -d build"
   },
+  "homepage": "https://wm129.github.io/Budget-app/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -30,5 +30,4 @@
     ]
   },
   "browserslist": []
-  
 }
