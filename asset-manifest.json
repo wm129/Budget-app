@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.440c2f3c.chunk.css",
-    "main.js": "/static/js/main.12a7c8cc.chunk.js",
-    "main.js.map": "/static/js/main.12a7c8cc.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4ce3f326.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4ce3f326.js.map",
-    "static/js/2.528a8854.chunk.js": "/static/js/2.528a8854.chunk.js",
-    "static/js/2.528a8854.chunk.js.map": "/static/js/2.528a8854.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.440c2f3c.chunk.css.map": "/static/css/main.440c2f3c.chunk.css.map",
-    "static/js/2.528a8854.chunk.js.LICENSE.txt": "/static/js/2.528a8854.chunk.js.LICENSE.txt"
+    "main.css": "/Budget-app/static/css/main.440c2f3c.chunk.css",
+    "main.js": "/Budget-app/static/js/main.4dc7531b.chunk.js",
+    "main.js.map": "/Budget-app/static/js/main.4dc7531b.chunk.js.map",
+    "runtime-main.js": "/Budget-app/static/js/runtime-main.87e50e91.js",
+    "runtime-main.js.map": "/Budget-app/static/js/runtime-main.87e50e91.js.map",
+    "static/js/2.30c9474b.chunk.js": "/Budget-app/static/js/2.30c9474b.chunk.js",
+    "static/js/2.30c9474b.chunk.js.map": "/Budget-app/static/js/2.30c9474b.chunk.js.map",
+    "index.html": "/Budget-app/index.html",
+    "static/css/main.440c2f3c.chunk.css.map": "/Budget-app/static/css/main.440c2f3c.chunk.css.map",
+    "static/js/2.30c9474b.chunk.js.LICENSE.txt": "/Budget-app/static/js/2.30c9474b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ce3f326.js",
-    "static/js/2.528a8854.chunk.js",
+    "static/js/runtime-main.87e50e91.js",
+    "static/js/2.30c9474b.chunk.js",
     "static/css/main.440c2f3c.chunk.css",
-    "static/js/main.12a7c8cc.chunk.js"
+    "static/js/main.4dc7531b.chunk.js"
   ]
 }
